@@ -25,8 +25,8 @@
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
 <ul class="nav navbar-nav">
-<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a><li>
-<li><a href="#">Register</a><li>
+<li><a href="index"><i class="fa fa-home" aria-hidden="true"></i> Home</a><li>
+<li><a href="register">Register</a><li>
 <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a><li>
 <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i> Product Category</a><li>
 </ul>
