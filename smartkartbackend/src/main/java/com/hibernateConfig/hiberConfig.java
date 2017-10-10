@@ -54,6 +54,8 @@ public class hiberConfig {
 		sb.addProperties(getHiberProps());
 		sb.addAnnotatedClass(User.class);
 		sb.addAnnotatedClass(Category.class); 
+		sb.addAnnotatedClass(Supplier.class);
+		sb.addAnnotatedClass(Product.class);
 		SessionFactory sessionFactory=sb.buildSessionFactory();
 		
 		System.out.println("Session Factory is created");

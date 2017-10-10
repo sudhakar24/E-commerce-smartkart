@@ -1,7 +1,5 @@
 package com.Daolmpl;
 
-
-
 import java.util.List;
 
 import org.hibernate.Session;
@@ -11,22 +9,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.model.Category;
-import com.Dao.CategoryDao;
+import com.Dao.SupplierDao;
+import com.model.Supplier;
 
 
-@Repository("categoryDao")
-public class CategoryDaoImpl implements CategoryDao  
-  {
+
+@Repository("supplierDao")
+public class SupplierDaoImpl implements SupplierDao
+{
 	@Autowired
 	SessionFactory sessionFactory;
 	
 	@Transactional 
 	@Override
-	public boolean addCategory(Category category) {
+	public boolean addSupplier(Supplier supplier) {
 		try
 		{
-		sessionFactory.getCurrentSession().saveOrUpdate(category);
+		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 		return true;
 		}
 		catch(Exception e)
@@ -34,44 +33,24 @@ public class CategoryDaoImpl implements CategoryDao
 			System.out.println("Exception arised"+e);
 		return false;
 		}
-	}
-	@Override
-	public List<Category> retrieveCategory() {
-		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from Category");
-		List<Category> listCategory=query.list();
-		session.close();
-		return listCategory;
-	}
-	@Transactional
-	@Override		
-	public boolean deleteCategory(Category category) {
 		
-		try
-		{
-		sessionFactory.getCurrentSession().delete(category);
-		return true;
-		}
-		catch(Exception e)
-		{
-			System.out.println("Exception arised"+e);
-		return false;
-		}
 	}
+
 	@Override
-	public Category getCategory(int catId) {
+	public List<Supplier> retrieveSupplier() {
 		Session session=sessionFactory.openSession();
-		Category category=(Category)session.get(Category.class,catId);
+		Query query=session.createQuery("from Supplier");
+		List<Supplier> listSupplier=query.list();
 		session.close();
-		return category;
+		return listSupplier;
 		
 	}
 	@Transactional
 	@Override
-	public boolean updateCategory(Category category) {
+	public boolean deleteSupplier(Supplier supplier) {
 		try
 		{
-		sessionFactory.getCurrentSession().saveOrUpdate(category);
+		sessionFactory.getCurrentSession().delete(supplier);
 		return true;
 		}
 		catch(Exception e)
@@ -81,6 +60,30 @@ public class CategoryDaoImpl implements CategoryDao
 		}
 		
 	}
+
+	@Override
+	public Supplier getSupplier(int catId) {
+		Session session=sessionFactory.openSession();
+		Supplier supplier=(Supplier)session.get(Supplier.class,catId);
+		session.close();
+		return supplier;
+	}
+	@Transactional
+	@Override
+	public boolean updateSupplier(Supplier supplier) {
+		try
+		{
+		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
+		return true;
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception arised"+e);
+		return false;
+		}
+
+	}
 	
 	
+
 }

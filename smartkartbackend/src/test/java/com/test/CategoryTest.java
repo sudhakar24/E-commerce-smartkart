@@ -31,18 +31,61 @@ public class CategoryTest
 		categoryDao=(CategoryDao)configApplnContext.getBean("categoryDao");
 	}
 	
-	
+	@Ignore
 	@Test
 	public void addCategoryTest()
 	{
 		Category category=new Category();
-		category.setCatId(1001);
+		category.setCatId(1002);
 		category.setCatName("JMShirt");
-		category.setCatDesc("John Miller Shirt");
+		category.setCatDesc(" Miller Shirt");
 		
 	assertTrue(categoryDao.addCategory(category));
 	}
-	
+	@Ignore
+	@Test
+	public void updateCategoryTest()
+	{
+		Category category=new Category();
+		category.setCatId(1002);
+		category.setCatName("JMShirt");
+		category.setCatDesc("John Miller Shirt is best");
+		
+	assertTrue(categoryDao.updateCategory(category));
+	}
+	@Ignore
+	@Test
+	public void deleteCategoryTest()
+	{
+		Category category=new Category();
+		category.setCatId(1002);
+	assertTrue(categoryDao.deleteCategory(category));
+	}
+	@Ignore
+	@Test
+	public void retrieveCategoryTest()
+	{
+		List<Category> listCategory=categoryDao.retrieveCategory();
+		assertNotNull("Problem in Retriving",listCategory);
+		this.show(listCategory);
+	}
+	public void show(List<Category> listCategory)
+	{
+		for(Category category:listCategory)
+		{
+			System.out.println("Category ID:"+category.getCatId());
+			System.out.println("Category Name:"+category.getCatName());
+		}
+	}
+	@Ignore
+	@Test
+	public void getCategoryTest()
+	{
+		Category category=categoryDao.getCategory(1002);
+		assertNotNull("Problem in Getting:",category);
+		System.out.println("Category Id:"+category.getCatId());
+		System.out.println("Category Name:"+category.getCatName());
+	}
 	
 }
 
