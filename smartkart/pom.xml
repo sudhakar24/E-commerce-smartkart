@@ -18,7 +18,7 @@
  <groupId>com</groupId>
   <artifactId>smartkartBackEnd</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  </dependency>
+  </dependency> 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 <dependency>
     <groupId>org.springframework</groupId>
