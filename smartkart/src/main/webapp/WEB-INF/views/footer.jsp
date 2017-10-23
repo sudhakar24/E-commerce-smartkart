@@ -32,6 +32,7 @@ td{
 a{
 color:black;
 }
+
 </style>
 </head>
 
@@ -51,19 +52,19 @@ color:black;
 <ul><a herf="">Careers</a></ul>
 </td>
 <br>
-
-<td>
-<ul><a herf="">Payments</a></ul>
-<ul><a herf="">Cancellation</a></ul>
-<ul><a herf="">Shipping</a></ul>
-<ul><a herf="">FAQ</a></ul>
-</td>
 <td>
 <ul><a herf=""><i class="fa fa-facebook" aria-hidden="true"></i> facebook</a></ul>
 <ul><a herf=""><i class="fa fa-twitter" aria-hidden="true"></i> twitter</a></ul>
 <ul><a herf=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></ul>
 <ul><a herf=""><i class="fa fa-envelope" aria-hidden="true"></i>   E-mail</a></ul>
 </td>
+<td>
+<ul><a herf="">Payments</a></ul>
+<ul><a herf="">Cancellation</a></ul>
+<ul><a herf="">Shipping</a></ul>
+<ul><a herf="">FAQ</a></ul>
+</td>
+
 <br>
 
 </tr>

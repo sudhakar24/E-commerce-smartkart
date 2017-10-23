@@ -9,11 +9,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+
+</style>
 </head>
-<%@ include file="header.jsp" %>
+<jsp:include page="header.jsp"></jsp:include>
 <body>
-<div class="container">
-<h2><i>Hello World!</i></h2>
+<div class="container" style=width:100%;height:550px>
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
 <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
@@ -21,23 +24,24 @@
 <li data-target="#myCarousel3" data-slide-to="2" class="active"></li>
 <li data-target="#myCarousel4" data-slide-to="3" class="active"></li>
 </ol>
-<div class="carousel-inner">
+<div class="carousel-inner" align="center">
 <div class="item active">
 <img class="img-rounded" class="img-responsive center-block"
-src="resources/carouselimage1.jpg" style="width:100%;height:0.1%">
+src="resources/carousel1.png" style=height:500px;width:100%>
 </div>
 <div class="item">
 <img class="img-rounded" class="img-responsive center-block"
-src="resources/carouselimage2.jpg" style="width:100%;height:0.1%">
+src="resources/carousel2.jpg" style=height:500px;width:100%>
 </div>
 <div class="item">
 <img class="img-rounded" class="img-responsive center-block"
-src="resources/carouselimage3.jpg" style="width:100%;height:0.1%">
+src="resources/carousel3.jpg" style=height:500px;width:100%>
 </div>
 <div class="item">
 <img class="img-rounded" class="img-responsive center-block"
-src="resources/carouselimage4.jpg" style="width:100%;height:0.1%">
+src="resources/carousel4.jpg" style=height:500px;width:100%>
 </div>
+
 </div>
 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -50,5 +54,5 @@ src="resources/carouselimage4.jpg" style="width:100%;height:0.1%">
 </div>
 </div>
 </body>
-<%@ include file="footer.jsp" %>
+<jsp:include page="footer.jsp"></jsp:include>
 </html>

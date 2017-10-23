@@ -9,54 +9,81 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<style>
+button {
+    background-color:#0000;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+ 
+    
+}
+.submitbtn {
+    padding: 14px 20px;
+    background-color:green;
+    color:white;
+    width:30%;
+    margin-right:1%;
+  
+}
+.submitbtn,.erasebtn {
+	
+    float: center;
+   
+}
+
+</style>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
 <div class="container">
-<hl> Customer Sign Up Form</hl>
-<div class="col-lg-12">
+
+<div class="col-lg-8">
 <div class="row">
 <spr:form modelAttribute="user" action="saveRegister" method="post">
-<div class="col-lg-12">
-
+<div class="col-lg-8">
+<hl> Customer Registration Form</hl>
 <div class="form-group">
-<label>Email</label>
-<spr:input path="email" placeholder="Enter the email Id" class="form-control"/>
+<label>First Name</label>
+<spr:input path="firstname" placeholder="Enter first name" class="form-control"/>
 </div>
 
 <div class="form-group">
-<label>Name</label>
-<spr:input path="name" placeholder="Enter the name" class="form-control"/>
+<label>Last Name</label>
+<spr:input path="lastname" placeholder="Enter last name" class="form-control"/>
 </div>
 
 <div class="form-group">
-<label>Address</label>
-<spr:input path="address" placeholder="Enter the Address" class="form-control"/>
+<label>Email Id</label>
+<spr:input path="email" placeholder="Enter Email Id" class="form-control"/>
 </div>
 
 <div class="form-group">
-<label>Phone</label>
-<spr:input path="phone" placeholder="Enter the phone number" class="form-control"/>
+<label>Phone No</label>
+<spr:input path="phone" placeholder="Enter phone number" class="form-control"/>
 </div>
 <div class="form-group">
 <label>Password</label>
-<spr:input type="password" path="password" placeholder="Enter the password" class="form-control"/>
+<spr:input type="password" path="password" placeholder="Enter password" class="form-control"/>
+</div><div class="form-group">
+
+<label>Address</label>
+<spr:input path="address" placeholder="Enter Address" class="form-control"/>
 </div>
 <div class="form-group">
 <label>Country</label>
 <spr:input path="country" placeholder="Enter the country" class="form-control"/>
 </div>
 
-<button type="submit" class="btn btn-lg btn-info">Submit</button>
-<button type="reset" class="btn btn-lg btn-info">Reset</button>
+<button type="submit" class="submitbtn">Submit</button>
+<button type="reset"  class="erasebtn">Reset</button>
 </div>
 
 </spr:form>
 </div>
 </div>
 </div>
-<jsp:include page="footer.jsp"></jsp:include>
+
 </body>
 </html>

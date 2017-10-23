@@ -20,6 +20,11 @@ public class indexController {
 	{
 		return "index";
 	}
+	@RequestMapping(value="/index")
+	public String in()
+	{
+		return "index";
+	}
 	/*@RequestMapping("/register")
 	public String registration()
 	{
