@@ -81,7 +81,7 @@ public class SupplierTest
 			System.out.println("Supplier Name:"+supplier.getSupplierName());
 		}
 	}
-	
+	@Ignore
 	@Test
 	public void getSupplierTest()
 	{
