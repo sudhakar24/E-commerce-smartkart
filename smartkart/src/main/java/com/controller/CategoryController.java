@@ -50,21 +50,17 @@ public class CategoryController {
 		return "updateCategory";
 	}
 	@RequestMapping(value="UpdateCategory",method=RequestMethod.POST)
-	public String updateCategory(@RequestParam("catName") String catName,@RequestParam("catDesc") String catDesc,Model m)
-	{
-		Category category=new Category();
-	
-		category.setCatName(catName);
-		category.setCatDesc(catDesc);
+	public String updateMyCategory(@ModelAttribute("category")Category category,Model m)
+	{	
 		
-		m.addAttribute(category);
 		categoryDao.updateCategory(category);
-		
+		Category category1=new Category();
+		m.addAttribute(category1);
 		
 		List<Category> listCategory=categoryDao.retrieveCategory();
 		m.addAttribute("categoryList",listCategory);
 		
-		return "category";   
+		return "category";
 	}
 	@RequestMapping(value="deleteCategory/{catId}",method=RequestMethod.GET)
 	public String deleteCategory(@PathVariable("catId")int catId,Model m)
@@ -75,4 +71,5 @@ public class CategoryController {
 		m.addAttribute("categoryList",listCategory);
 		return "category";
 	}
+	
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Dao.SupplierDao;
+
 import com.model.Supplier;
 
 @Controller
@@ -20,10 +21,14 @@ public class SupplierController {
 	SupplierDao supplierDao;
 	
 	@RequestMapping(value="AddSupplier",method=RequestMethod.POST)
-	public String addSupplier(@ModelAttribute("supplier")Supplier supplier,Model m)
+	public String addSupplier(@RequestParam("supplierId") int supplierId,@RequestParam("supplierName") String supplierName,@RequestParam("supplierDes") String supplierDes,@RequestParam("supplierEmail")String supplierEmail,Model m)
 	{
-		Supplier supplier1=new Supplier();
-		m.addAttribute(supplier1);
+		Supplier supplier=new Supplier();
+		supplier.setSupplierId(supplierId);
+		supplier.setSupplierName(supplierName);
+		supplier.setSupplierDes(supplierDes);
+		supplier.setSupplierEmail(supplierEmail);
+		m.addAttribute(supplier);
 		
 		supplierDao.addSupplier(supplier);
 		List<Supplier> listSupplier=supplierDao.retrieveSupplier();
@@ -48,6 +53,19 @@ public class SupplierController {
 		m.addAttribute(supplier);
 		List<Supplier> listSupplier=supplierDao.retrieveSupplier();
 		m.addAttribute("supplierList",listSupplier);
+		return "updateSupplier";
+	}
+	@RequestMapping(value="UpdateSupplier",method=RequestMethod.POST)
+	public String updateMySupplier(@ModelAttribute("supplier")Supplier supplier,Model m)
+	{	
+		
+		supplierDao.updateSupplier(supplier);
+		Supplier supplier1=new Supplier();
+		m.addAttribute(supplier1);
+		
+		List<Supplier> listSupplier=supplierDao.retrieveSupplier();
+		m.addAttribute("supplierList",listSupplier);
+		
 		return "Supplier";
 	}
 	
@@ -60,4 +78,5 @@ public class SupplierController {
 		m.addAttribute("supplierList",listSupplier);
 		return "Supplier";
 	}
+	
 }

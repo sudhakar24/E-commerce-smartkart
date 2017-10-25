@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" import="com.model.Category"%>
+<%@ page language="java" contentType="text/html" import="com.model.Supplier"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE> 
@@ -8,47 +8,56 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Category Smartkart</title>
+
+
 </head>
+
+
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<form:form action="../UpdateCategory" modelAttribute="category" method="post">
+<form:form action="../UpdateSupplier" modelAttribute="supplier" method="post">
 <table align="center" cellsapcing="2">
 	<tr>
-		<td colspan="2">Category Module</td>
+		<td colspan="2">Supplier Module</td>
 	</tr>
 	<tr>
-		<td>Category ID</td>
-		<td><form:input path="catId"/></td>
+		<td>Supplier ID</td>
+		<td><form:input path="supplierId"/></td>
 	</tr>
 	<tr>
-		<td>Category Name</td>
-		<td><form:input path="catName"/></td>
+		<td>Supplier Name</td>
+		<td><form:input path="supplierName"/></td>
 	</tr>
 	<tr>
-		<td>Category Description</td>
-		<td><form:input path="catDesc"/></td>
+		<td>Supplier Description</td>
+		<td><form:input path="supplierDes"/></td>
 	</tr>
+	<tr>
+		<td>Supplier Email</td>
+		<td><form:input path="supplierEmail"/></td>
+	<tr>
 		<td colspan="2">
-			<center><input type="submit" value="Update Category"/></center>
+			<center><input type="submit" value="Update Supplier"/></center>
 			<center><button type="reset">Erase</button>
 		</td>
 	</tr>
 
 </table>
 </form:form>
- <table align="center">
+<table align="center">
 <tr bgcolor="lightblue">
-	<td>Category Id</td>
-	<td>Category Name</td>
-	<td>Category Description</td>
-	<td>operation</td>
+	<td>Supplier Id</td>
+	<td>Supplier Name</td>
+	<td>Supplier Description</td>
+	<td>Supplier Email</td>
+	
 </tr> 
-<c:forEach items="${categoryList}" var="category">
+<c:forEach items="${supplierList}" var="supplier">
 	<tr bgcolor="cyan">
-	<td>${category.catId}</td>
-	<td>${category.catName}</td>
-	<td>${category.catDesc}</td>
+	<td>${supplier.supplierId}</td>
+	<td>${supplier.supplierName}</td>
+	<td>${supplier.supplierDes}</td>
+	<td>${supplier.supplierEmail}</td>
 	</tr>
 
 </c:forEach>

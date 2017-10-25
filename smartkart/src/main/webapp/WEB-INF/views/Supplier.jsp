@@ -11,29 +11,30 @@
 
 
 </head>
-<jsp:include page="header.jsp"></jsp:include>
+
 
 <body>
-<form:form action="AddSupplier" modelAttribute="supplier">
+<jsp:include page="header.jsp"></jsp:include>
+<form action="AddSupplier" method="post">
 <table align="center" cellsapcing="2">
 	<tr>
 		<td colspan="2">Supplier Module</td>
 	</tr>
 	<tr>
 		<td>Supplier ID</td>
-		<td><form:input path="supplierId"/></td>
+		<td><input type="text" name="supplierId"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Name</td>
-		<td><form:input path="supplierName"/></td>
+		<td><input type="text" name="supplierName"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Description</td>
-		<td><form:input path="supplierDes"/></td>
+		<td><input type="text" name="supplierDes"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Email</td>
-		<td><form:input path="supplierEmail"/></td>
+		<td><input type="text" name="supplierEmail"/></td>
 	<tr>
 		<td colspan="2">
 			<center><input type="submit" value="Insert"/></center>
@@ -42,7 +43,7 @@
 	</tr>
 
 </table>
-</form:form>
+</form>
 <table align="center">
 <tr bgcolor="lightblue">
 	<td>Supplier Id</td>
@@ -58,8 +59,8 @@
 	<td>${supplier.supplierDes}</td>
 	<td>${supplier.supplierEmail}</td>
 	<td>
-	<a href="<c:url value="deleteSupplier/${supplier.supplierId}"/>">DELETE</a>
-	<a href="<c:url value="updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
+	<a href="<c:url value="/deleteSupplier/${supplier.supplierId}"/>">DELETE</a>
+	<a href="<c:url value="/updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
 	</td>
 	</tr>
 

@@ -10,64 +10,75 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style>
-
-table{
-     width: 100%;
+footer {
+   
+    margin-top: 40px;
+  	background-color:#BDBDBD;
+ 
+    border-top-width: 1px;
 }
-th{
-	height:60px;
-	padding-left:40px;
-	padding-bottom:5px;
-	border-bottom:1px solid #FFFF;
-	background-color: #757575;
-    color: white;
+.footer-links {
+    padding: 0;
+   color:black;
+    width: 20%;
+    float: left;
+    vertical-align: top;
 }
-td{
-	height:150px;
-	padding-left:0px;
-	padding-top:5px;
-	background-color: #E0E0E0;
-    color:black;
-	}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 1px;
+    margin-left: auto;
+    
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: black;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
 a{
-color:black;
+	color:black;
 }
 
 </style>
 </head>
 
 <body>
-<table>
- 
-<tr>
-<th>SmartKart</th>
-<th>Keep in Touch</th>
-<th>Help</th>
-</tr>
-<br>
-<tr>
-<td>
-<ul><a herf="">Contact Us</a></ul>
-<ul><a herf="">About Us</a></ul>
-<ul><a herf="">Careers</a></ul>
-</td>
-<br>
-<td>
-<ul><a herf=""><i class="fa fa-facebook" aria-hidden="true"></i> facebook</a></ul>
-<ul><a herf=""><i class="fa fa-twitter" aria-hidden="true"></i> twitter</a></ul>
-<ul><a herf=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></ul>
-<ul><a herf=""><i class="fa fa-envelope" aria-hidden="true"></i>   E-mail</a></ul>
-</td>
-<td>
-<ul><a herf="">Payments</a></ul>
-<ul><a herf="">Cancellation</a></ul>
-<ul><a herf="">Shipping</a></ul>
-<ul><a herf="">FAQ</a></ul>
-</td>
+<footer>
+<section class="container">
 
-<br>
+<div class="footer-links">
+<h5>SmartKart</h5>
 
-</tr>
-</table>
+<li><a href="${pageContext.request.contextPath}/"/>Contact us</li>
+<li><a href="${pageContext.request.contextPath}/"/>About us</li>
+<li><a href="${pageContext.request.contextPath}/"/>Careers</li>
+
+</div>
+<div class="footer-links">
+<h5>Keep in Touch</h5>
+
+<li><a href="${pageContext.request.contextPath}/"/>facebook</li>
+<li><a href="${pageContext.request.contextPath}/"/>twitter</li>
+<li><a href="${pageContext.request.contextPath}/"/>Instagram</li>
+<li><a href="${pageContext.request.contextPath}/"/> Email</li>
+
+</div>
+<div class="footer-links">
+<h5>Help</h5>
+
+<li><a href="${pageContext.request.contextPath}/"/>Payment</li>
+<li><a href="${pageContext.request.contextPath}/"/>Shipping</li>
+<li><a href="${pageContext.request.contextPath}/"/>Cancellation</li>
+<li><a href="${pageContext.request.contextPath}/"/>FAQ</li>
+</div>
+</section>
+</div>
+</footer>
 </body>
 </html>

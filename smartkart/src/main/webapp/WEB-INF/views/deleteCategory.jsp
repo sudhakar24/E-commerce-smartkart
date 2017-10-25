@@ -12,7 +12,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<form:form action="../UpdateCategory" modelAttribute="category" method="post">
+<form:form action="../DeleteCategory" modelAttribute="category" method="post">
 <table align="center" cellsapcing="2">
 	<tr>
 		<td colspan="2">Category Module</td>
@@ -50,7 +50,8 @@
 	<td>${category.catName}</td>
 	<td>${category.catDesc}</td>
 	</tr>
-
+	<a href="<c:url value="/deleteCategory/${category.catId}"/>">DELETE</a>
+	<a href="<c:url value="/updateCategory/${category.catId}"/>">UPDATE</a>
 </c:forEach>
 </table>
  

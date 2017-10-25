@@ -19,6 +19,14 @@ li a.ab{
 	font-family: "Bauhaus 93";
 	
 	}
+	.navbar-default {
+    background-color: blanchedalmond;
+    border-color: #e7e7e7;
+    }
+    .navbar-default {
+    background-color:#C1E1A6 !important;
+    
+}
 </style>
 </head>
 <body>
@@ -36,17 +44,19 @@ li a.ab{
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
 <ul class="nav navbar-nav">
-<li><a href="index" class="ab">SmartKart</a><li>
-<li><a href="index"><i class="fa fa-home" aria-hidden="true"></i>Home</a><li>
-<li><a href="category"><i class="fa fa-list" aria-hidden="true"></i>Category</a>
-<li><a href="Supplier">Supplier List</a>
+<li><a href="${pageContext.request.contextPath}/index" class="ab">SmartKart</a><li>
+<li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home" aria-hidden="true"></i>Home</a><li>
+<li><a href="${pageContext.request.contextPath}/category"><i class="fa fa-list" aria-hidden="true"></i>Category</a>
+<li><a href="${pageContext.request.contextPath}/Supplier">Supplier List</a>
+<li><a href="${pageContext.request.contextPath}/product">Product List</a>
+
 </ul>
 
 
 
 <ul class="nav navbar-nav navbar-right">
-<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a><li>
-<li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a><li>
+<li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a><li>
+<li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a><li>
 
 </ul>
 </div>

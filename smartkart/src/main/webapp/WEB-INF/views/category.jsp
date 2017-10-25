@@ -10,9 +10,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Category Smartkart</title>
 </head>
+<jsp:include page="header.jsp"></jsp:include>
 <body>
+
 <form action="AddCategory" method="post">
-<table align="center" cellsapcing="2">
+<table  align="left" cellsapcing="2">
 	<tr>
 		<td colspan="2">Category Module</td>
 	</tr>
@@ -37,7 +39,7 @@
 
 </table>
 </form>
-<table align="center">
+<table align="right">
 <tr bgcolor="lightblue">
 	<td>Category Id</td>
 	<td>Category Name</td>
@@ -50,8 +52,9 @@
 	<td>${category.catName}</td>
 	<td>${category.catDesc}</td>
 	<td>
-	<a href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>
-	<a href="<c:url value="updateCategory/${category.catId}"/>">UPDATE</a>
+	
+	<a href="<c:url value="/deleteCategory/${category.catId}"/>">DELETE</a>
+	<a href="<c:url value="/updateCategory/${category.catId}"/>">UPDATE</a>
 	</td>
 	</tr>
 
