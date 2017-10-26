@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.Dao.ProductDao;
 import com.model.Product;
-import com.model.Supplier;
 
 @Repository("productDao")
 public class ProductDaoImpl implements ProductDao {

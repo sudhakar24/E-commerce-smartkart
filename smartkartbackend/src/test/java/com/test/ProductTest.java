@@ -38,9 +38,9 @@ static ProductDao productDao;
 	public void addProduct()
 	{
 		Product product=new Product();
-		product.setProductId(202);
-		product.setProductName("Nokia 10");
-		product.setProductDes("3 gb ram");
+		//product.setProductId(202);
+		product.setProductName("Nokia 20");
+		product.setProductDes("4 gb ram");
 		product.setStock(10);
 		product.setPrice(15000);
 		product.setCatId(1002);
@@ -69,7 +69,7 @@ static ProductDao productDao;
 		product.setProductId(202);
 		assertTrue(productDao.deleteProduct(product));
 	}
-	@Ignore
+	
 	@Test
 	public void retrieveProductTest()
 	{

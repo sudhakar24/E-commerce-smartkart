@@ -1,6 +1,7 @@
 package com.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -11,7 +12,9 @@ import org.springframework.web.multipart.MultipartFile;
 @Table
 public class Product {
 	@Id
+	@GeneratedValue
 	int productId;
+	
 	String productName,ProductDes;
 	int stock,price,catId,supplierId;
 
