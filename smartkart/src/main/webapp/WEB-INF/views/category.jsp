@@ -20,7 +20,7 @@
 	</tr>
 	<tr>
 		<td>Category ID</td>
-		<td><input type="text" name="catId"/></td>
+		<td><input name="catId"/></td>
 	</tr>
 	<tr>
 		<td>Category Name</td>

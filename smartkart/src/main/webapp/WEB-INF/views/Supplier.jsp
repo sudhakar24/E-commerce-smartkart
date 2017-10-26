@@ -22,7 +22,7 @@
 	</tr>
 	<tr>
 		<td>Supplier ID</td>
-		<td><input type="text" name="supplierId"/></td>
+		<td><input name="supplierId"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Name</td>

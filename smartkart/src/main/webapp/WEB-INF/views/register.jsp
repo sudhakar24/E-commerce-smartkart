@@ -31,7 +31,6 @@ button {
     float: center;
    
 }
-
 </style>
 </head>
 <body>

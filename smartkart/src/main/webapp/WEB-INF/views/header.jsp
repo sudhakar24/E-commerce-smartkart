@@ -49,6 +49,7 @@ li a.ab{
 <li><a href="${pageContext.request.contextPath}/category"><i class="fa fa-list" aria-hidden="true"></i>Category</a>
 <li><a href="${pageContext.request.contextPath}/Supplier">Supplier List</a>
 <li><a href="${pageContext.request.contextPath}/product">Product List</a>
+<li><a href="${pageContext.request.contextPath}/productDetails">Product Details</a>
 
 </ul>
 

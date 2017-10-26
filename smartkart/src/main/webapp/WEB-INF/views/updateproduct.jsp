@@ -8,14 +8,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Product Smartkart</title>
+<title>Update Product</title>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data" method="post">
-<table align="center">
+<form:form action="../UpdateProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
+<table align="center" cellsapcing="5">
 	<tr>
-		<td>Product Module</td>
+		<td colspan="2">Product Module</td>
 	</tr>
 	<tr> 
 		<td>Product ID</td>
@@ -60,7 +60,7 @@
 	
 	<tr>
 		<td colspan="2">
-		<center><input type="submit" value="Insert"/></center>
+		<center><input type="submit" value="updateproduct"/></center>
 		</td>
 	</tr>
 	
