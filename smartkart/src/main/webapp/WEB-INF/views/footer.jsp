@@ -10,74 +10,46 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style>
-footer {
+a {
+    color: #0f0f0f;
    
-    margin-top: 40px;
-  	background-color:#BDBDBD;
- 
-    border-top-width: 1px;
 }
-.footer-links {
-    padding: 0;
-   color:black;
-    width: 20%;
-    float: left;
-    vertical-align: top;
+h5{
+	text-decoration: underline;
+
 }
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: 1px;
-    margin-left: auto;
-    
-}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: black;
-}
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-a{
-	color:black;
+p{
+	
 }
 </style>
 </head>
-
 <body>
-<footer>
-<section class="container">
 
-<div class="footer-links">
-<h5>SmartKart</h5>
-
-<li><a href="${pageContext.request.contextPath}/"/>Contact us</li>
-<li><a href="${pageContext.request.contextPath}/"/>About us</li>
-<li><a href="${pageContext.request.contextPath}/"/>Careers</li>
-
+<div id="pop" style=width:100%;background:black;>
+<div id="container" style=width:100%;float:left; align="center">
+<div id="con" style=width:33%;float:left;>
+<h5 align="right">SmartKart</h5>
+<h6 align="right"><a href="${pageContext.request.contextPath}/"/>Contact us</h6>
+<h6 align="right"><a href="${pageContext.request.contextPath}/"/>About us</h6>
+<h6 align="right"><a href="${pageContext.request.contextPath}/"/>Careers</h6>
 </div>
-<div class="footer-links">
+<div id="conn" style=width:33%;background:white;float:left;>
 <h5>Keep in Touch</h5>
 
-<li><a href="${pageContext.request.contextPath}/"/>facebook</li>
-<li><a href="${pageContext.request.contextPath}/"/>twitter</li>
-<li><a href="${pageContext.request.contextPath}/"/>Instagram</li>
-<li><a href="${pageContext.request.contextPath}/"/> Email</li>
+<h6><a href="${pageContext.request.contextPath}/"/>facebook</h6>
+<h6><a href="${pageContext.request.contextPath}/"/>twitter</h6>
+<h6><a href="${pageContext.request.contextPath}/"/>Instagram</h6>
+<h6><a href="${pageContext.request.contextPath}/"/> Email</h6>
 
 </div>
-<div class="footer-links">
-<h5>Help</h5>
+<div id="don" style=width:33%;background:white;float:left;>
+<h5 align="left">Help</h5>
 
-<li><a href="${pageContext.request.contextPath}/"/>Payment</li>
-<li><a href="${pageContext.request.contextPath}/"/>Shipping</li>
-<li><a href="${pageContext.request.contextPath}/"/>Cancellation</li>
-<li><a href="${pageContext.request.contextPath}/"/>FAQ</li>
+<h6 align="left"><a href="${pageContext.request.contextPath}/"/>Payment</h6>
+<h6 align="left"><a href="${pageContext.request.contextPath}/"/>Shipping</h6>
+<h6 align="left"><a href="${pageContext.request.contextPath}/"/>Cancellation</h6>
+<h6 align="left"><a href="${pageContext.request.contextPath}/"/>FAQ</h6>
 </div>
-</section>
 </div>
-</footer>
 </body>
 </html>

@@ -10,8 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Category Smartkart</title>
 </head>
-<body>
 <jsp:include page="header.jsp"></jsp:include>
+
+<body>
 <form:form action="../UpdateCategory" modelAttribute="category" method="post">
 <table align="center" cellsapcing="2">
 	<tr>
@@ -53,7 +54,9 @@
 
 </c:forEach>
 </table>
+ <div  style=width:100%;height:2px;margin-top:400px;background:black;></div>
  
-  
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
+
 </html>

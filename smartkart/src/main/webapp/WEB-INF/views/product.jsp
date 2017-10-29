@@ -39,19 +39,22 @@
 	</tr>
 	<tr>
 		<td>Category</td>
-		<td><form:input path="catId"/></td>
-		
+		<td><form:select path="catId">
+		<form:option value="0" label="---Select--"/>
+		<form:options items="${categoryList}"/>
+		</form:select>
+		</td>
 	
 	</tr>
 	
 	<tr>
 		<td>Supplier</td>
-		<td><form:input path="supplierId"/></td>
-		<!--<td><form:select path="supplierId">
+		
+		<td><form:select path="supplierId">
 		<form:option value="0" label="---select---"/>
 		<form:options items="${supplierList}"/>
 		</form:select>
-		</td>-->
+		</td>
 	</tr>
 	<tr>
 		<td>Product Image</td>
@@ -66,5 +69,9 @@
 	
 </table>
 </form:form>
+<div  style=width:100%;height:2px;margin-top:400px;background:black;></div>
+
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
+
 </html>

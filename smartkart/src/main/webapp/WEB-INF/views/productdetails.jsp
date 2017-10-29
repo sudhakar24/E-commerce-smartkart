@@ -40,5 +40,9 @@
 		</tr>
 	</c:forEach>
 </table>
+<div  style=width:100%;height:2px;margin-top:400px;background:black;></div>
+
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
+
 </html>

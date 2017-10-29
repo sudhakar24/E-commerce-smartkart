@@ -14,7 +14,7 @@
 </head>
 <jsp:include page="header.jsp"></jsp:include>
 <body>
-<div class="container" style=width:100%;height:550px>
+<div style=width:100%;height:550px>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
@@ -53,5 +53,7 @@ src="resources/carousel4.jpg" style=height:500px;width:100%>
 </div>
 </div>
 </body>
+<div  style=width:100%;height:2px;background:black;></div>
+
 <jsp:include page="footer.jsp"></jsp:include>
 </html>

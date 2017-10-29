@@ -20,16 +20,21 @@ import org.springframework.web.multipart.MultipartFile;
 import com.model.Category;
 import com.Dao.CategoryDao;
 import com.Dao.ProductDao;
+import com.Dao.SupplierDao;
 import com.model.Product;
+import com.model.Supplier;
 
 
 @Controller
 public class ProductController {
 	@Autowired
 	ProductDao productDao;
+	@Autowired
 	CategoryDao categoryDao;
+	@Autowired
+	SupplierDao supplierDao;
 	
-	/*public LinkedHashMap<Integer,String> getCategories()
+	public LinkedHashMap<Integer,String> getCategories()
 	{
 		List<Category> listCategories=categoryDao.retrieveCategory(); 
 		LinkedHashMap<Integer,String> categoriesList=new LinkedHashMap<Integer,String>();
@@ -39,13 +44,25 @@ public class ProductController {
 			
 		}
 		return categoriesList;
-	}*/
+	}
+	public LinkedHashMap<Integer,String> getSupplieries()
+	{
+		List<Supplier> listSupplieries=supplierDao.retrieveSupplier(); 
+		LinkedHashMap<Integer,String> supplieriesList=new LinkedHashMap<Integer,String>();
+		for(Supplier supplier:listSupplieries)
+		{
+			supplieriesList.put(supplier.getSupplierId(),supplier.getSupplierName());
+			
+		}
+		return supplieriesList;
+	}
 	@RequestMapping(value="product",method=RequestMethod.GET)
 	public String showProduct(Model m)
 	{ 
 		Product product=new Product();
 		m.addAttribute(product);
-		//m.addAttribute("categoryList",this.getCategories());
+		m.addAttribute("categoryList",this.getCategories());
+		m.addAttribute("supplierList", this.getSupplieries());
 		return "product";
 	}
 	

@@ -42,7 +42,7 @@ button {
 <div class="row">
 <spr:form modelAttribute="user" action="saveRegister" method="post">
 <div class="col-lg-8">
-<hl> Customer Registration Form</hl>
+<h1> Customer Registration Form</h1>
 <div class="form-group">
 <label>First Name</label>
 <spr:input path="firstname" placeholder="Enter first name" class="form-control"/>
@@ -83,6 +83,10 @@ button {
 </div>
 </div>
 </div>
+<div  style=width:100%;height:2px;margin-top:400px;background:black;></div>
+ 
 
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
+
 </html>

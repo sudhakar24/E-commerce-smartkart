@@ -13,33 +13,42 @@
 <jsp:include page="header.jsp"></jsp:include>
 <body>
 
+<div id="container" style=width:100%;float:left;margin-top:50px;margin-bottom:50px; align="center" >
+
 <form action="AddCategory" method="post">
-<table  align="left" cellsapcing="2">
+<table>
+	
 	<tr>
-		<td colspan="2">Category Module</td>
+		<h1 align="center">Category Module</h1>
 	</tr>
+	
 	<tr>
 		<td>Category ID</td>
 		<td><input name="catId"/></td>
 	</tr>
+	
 	<tr>
 		<td>Category Name</td>
 		<td><input type="text" name="catName"/></td>
 	</tr>
+
 	<tr>
 		<td>Category Description</td>
 		<td><input type="text" name="catDesc"/></td>
 	</tr>
 	<tr>
-		<td colspan="2">
-			<center><input type="submit" value="Insert"/></center>
-			<center><button type="reset">Erase</button>
-		</td>
+		<td>
+			<button type="submit" class="submitbtn">Insert</button>
+			<button type="reset" class="erasebtn">Erase</button>
+	</td>
 	</tr>
 
 </table>
+
 </form>
-<table align="right">
+</div>
+<div id="container" style=width:100%;float:left;margin-top:100px;margin-bottom:100px; align="center" >
+<table>
 <tr bgcolor="lightblue">
 	<td>Category Id</td>
 	<td>Category Name</td>
@@ -60,7 +69,11 @@
 
 </c:forEach>
 </table>
+ </div>
  
-  
+  <div  style=width:100%;height:2px;margin-top:800px;background:black;></div>
+ 
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
+ 
 </html>

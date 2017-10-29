@@ -10,22 +10,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style>
-li a.ab{
-	
-	text-transform: captilize;
-	letter-spacing: 4px;
-	font-weight: bold;
-	font-size: 20px;
-	font-family: "Bauhaus 93";
-	
-	}
-	.navbar-default {
-    background-color: blanchedalmond;
-    border-color: #e7e7e7;
-    }
     .navbar-default {
-    background-color:#C1E1A6 !important;
+    background-color:white !important;
+    color:black !important;
     
+}
+.navbar-default .navbar-nav>li>a {
+    color: #171717 !important;
+    font-size:15px !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    text-decoration: underline !important;
 }
 </style>
 </head>
@@ -43,9 +38,9 @@ li a.ab{
 </ul>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
-<ul class="nav navbar-nav">
-<li><a href="${pageContext.request.contextPath}/index" class="ab">SmartKart</a><li>
-<li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home" aria-hidden="true"></i>Home</a><li>
+<ul class="nav navbar-nav navbar-left">
+<li><a href="${pageContext.request.contextPath}/index" ><img src="resources/logo.JPG" style=width:100px;height:40px;></img></a><li>
+<li><a href="${pageContext.request.contextPath}/index" ><i class="fa fa-home" aria-hidden="true"></i>Home</a><li>
 <li><a href="${pageContext.request.contextPath}/category"><i class="fa fa-list" aria-hidden="true"></i>Category</a>
 <li><a href="${pageContext.request.contextPath}/Supplier">Supplier List</a>
 <li><a href="${pageContext.request.contextPath}/product">Product List</a>
