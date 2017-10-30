@@ -15,45 +15,53 @@
 
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<div id="container" style=width:100%;float:left;margin-top:50px;margin-bottom:50px; align="center" >
+
 <form:form action="../UpdateSupplier" modelAttribute="supplier" method="post">
-<table align="center" cellsapcing="2">
+<table  class="table" style=width:25%;margin:auto;>
 	<tr>
-		<td colspan="2">Supplier Module</td>
+		<h1 align="center">Update Supplier</h1>
 	</tr>
 	<tr>
 		<td>Supplier ID</td>
-		<td><form:input path="supplierId"/></td>
+		<td><form:input class="form-control"  path="supplierId"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Name</td>
-		<td><form:input path="supplierName"/></td>
+		<td><form:input class="form-control"  path="supplierName"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Description</td>
-		<td><form:input path="supplierDes"/></td>
+		<td><form:input class="form-control"  path="supplierDes"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Email</td>
-		<td><form:input path="supplierEmail"/></td>
+		<td><form:input class="form-control"  path="supplierEmail"/></td>
 	<tr>
-		<td colspan="2">
-			<center><input type="submit" value="Update Supplier"/></center>
-			<center><button type="reset">Erase</button>
+		<td>
+			<button style="width:100px;margin-left:60px;"  class="btn btn-success btn-outline" type="submit" class="submitbtn">Update</button>
 		</td>
+		<td>
+			<button style="width:50%;" class="btn btn-default btn-outline" type="reset" class="erasebtn">Erase</button>
+	</td>
 	</tr>
 
 </table>
 </form:form>
-<table align="center">
-<tr bgcolor="lightblue">
-	<td>Supplier Id</td>
-	<td>Supplier Name</td>
-	<td>Supplier Description</td>
-	<td>Supplier Email</td>
+</div>
+<table class="table" style=width:50%;margin:auto;>
+
+    
+    <thead class="blue-grey lighten-5"><tr bgcolor="black">
+    <td style=color:white>Supplier Id</td>
+	<td style=color:white>Supplier Name</td>
+	<td style=color:white>Supplier Description</td>
+	<td style=color:white>Supplier Email</td>
 	
 </tr> 
+</thead>
 <c:forEach items="${supplierList}" var="supplier">
-	<tr bgcolor="cyan">
+	<tr bgcolor="#EEEEEE">
 	<td>${supplier.supplierId}</td>
 	<td>${supplier.supplierName}</td>
 	<td>${supplier.supplierDes}</td>
@@ -63,6 +71,8 @@
 </c:forEach>
 </table>
  
-  
+<div  style=width:100%;height:2px;margin-top:150px;background:black;></div>
+ 
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
 </html>

@@ -12,59 +12,72 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<div id="container" style=width:100%;float:left;margin-top:50px;margin-bottom:50px; align="center" >
+
 <form:form action="../UpdateProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
-<table align="center" cellsapcing="5">
+<table  class="table" style=width:25%;margin:auto;>
 	<tr>
-		<td colspan="2">Product Module</td>
+		<h1 align="center">Update Product</h1>
 	</tr>
 	<tr> 
 		<td>Product ID</td>
-		<td><form:input path="productId"/></td> 
+		<td><form:input class="form-control" path="productId"/></td> 
 	</tr>
 	<tr> 
 		<td>Product Name</td>
-		<td><form:input path="productName"/></td>
+		<td><form:input class="form-control"  path="productName"/></td>
 	</tr>
 	<tr>
 		<td>Product Description</td>
-		<td><form:input path="productDes"/></td>
+		<td><form:input class="form-control"  path="productDes"/></td>
 	</tr>
 	<tr>
 		<td>Product Stock</td>
-		<td><form:input path="stock"/></td>
+		<td><form:input class="form-control"  path="stock"/></td>
 	</tr>
 	<tr>
 		<td>Product Price</td>
-		<td><form:input  path="price"/></td>
+		<td><form:input class="form-control"   path="price"/></td>
 	</tr>
 	<tr>
 		<td>Category</td>
-		<td><form:input path="catId"/></td>
+		<td><form:select  class="form-control" path="catId">
+		<form:option value="0" label="---Select--"/>
+		<form:options items="${categoryList}"/>
+		</form:select>
+		</td>
+	
 		
 	
 	</tr>
 	
 	<tr>
 		<td>Supplier</td>
-		<td><form:input path="supplierId"/></td>
-		<!--<td><form:select path="supplierId">
+		
+		<td><form:select class="form-control" path="supplierId">
 		<form:option value="0" label="---select---"/>
 		<form:options items="${supplierList}"/>
 		</form:select>
-		</td>-->
+		</td>
 	</tr>
 	<tr>
 		<td>Product Image</td>
-		<td><form:input type="file" path="pimage"/></td>
+		<td><form:input  class="form-control" type="file" path="pimage"/></td>
 	</tr>
 	
 	<tr>
-		<td colspan="2">
-		<center><input type="submit" value="updateproduct"/></center>
+		<td>
+			<button style="width:100px;margin-left:60px;"  class="btn btn-success btn-outline" type="submit" class="submitbtn">Update</button>
 		</td>
+		<td>
+			<button style="width:50%;" class="btn btn-default btn-outline" type="reset" class="erasebtn">Erase</button>
+	</td>
 	</tr>
-	
 </table>
 </form:form>
+<div  style=width:100%;height:2px;margin-top:150px;background:black;></div>
+ 
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
+
 </html>

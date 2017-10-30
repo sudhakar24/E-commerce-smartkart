@@ -39,21 +39,27 @@
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
 <ul class="nav navbar-nav navbar-left">
-<li><a href="${pageContext.request.contextPath}/index" ><img src="resources/logo.JPG" style=width:100px;height:40px;></img></a><li>
-<li><a href="${pageContext.request.contextPath}/index" ><i class="fa fa-home" aria-hidden="true"></i>Home</a><li>
-<li><a href="${pageContext.request.contextPath}/category"><i class="fa fa-list" aria-hidden="true"></i>Category</a>
-<li><a href="${pageContext.request.contextPath}/Supplier">Supplier List</a>
-<li><a href="${pageContext.request.contextPath}/product">Product List</a>
-<li><a href="${pageContext.request.contextPath}/productDetails">Product Details</a>
+<li><a href="${pageContext.request.contextPath}/index" ><img src="resources/logo.JPG" style=width:100px;height:40px;></img></a></li>
+<li><a href="${pageContext.request.contextPath}/index" ><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+<li><a href="${pageContext.request.contextPath}/category"><i class="fa fa-list" aria-hidden="true"></i>Category</a></li>
+<li><a href="${pageContext.request.contextPath}/Supplier">Supplier List</a></li>
+<li><a href="${pageContext.request.contextPath}/product">Product List</a></li>
+<li><a href="${pageContext.request.contextPath}/productDetails">Product Details</a></li>
 
 </ul>
 
 
 
 <ul class="nav navbar-nav navbar-right">
-<li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a><li>
-<li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a><li>
-
+<c:if test="${pageContext.request.userPrincipal.name==null}">
+<li><a href="${pageContext.request.contextPath}/goToLogin"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a></li>
+<li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+</c:if> 
+<c:if test="${pageContext.request.userPrincipal.name!=null}">
+<li><a>Welcome:${pageContext.request.userPrincipal.name}</a></li>
+<li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
+<li><a href="${pageContext.request.contextPath}/goToCart">My Cart <i class="fa fa-cart-plus" aria-hidden="true"></i> </a></li>
+</c:if>
 </ul>
 </div>
 </nav>

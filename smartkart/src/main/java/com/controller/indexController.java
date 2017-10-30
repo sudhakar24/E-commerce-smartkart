@@ -1,4 +1,4 @@
-package com.controller;
+ package com.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +25,29 @@ public class indexController {
 	{
 		return "index";
 	}
+	
+	@RequestMapping("/userLogged")
+	public String userLogged()
+	{
+		return "index";
+	}
+	@RequestMapping("/error")
+	public String errorPage()
+	{
+		return "error";
+	}
 	/*@RequestMapping("/register")
 	public String registration()
 	{
 		return "register";
 	}*/
+	@RequestMapping("/goToLogin")
+	public ModelAndView goToLogin()
+	{
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("login");
+		return mv;
+	}
 	@RequestMapping(value="/register", method=RequestMethod.GET)
 	public ModelAndView goToRegister()
 	{

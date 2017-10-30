@@ -9,6 +9,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Category Smartkart</title>
+<style>
+
+</style>
 </head>
 <jsp:include page="header.jsp"></jsp:include>
 <body>
@@ -16,7 +19,8 @@
 <div id="container" style=width:100%;float:left;margin-top:50px;margin-bottom:50px; align="center" >
 
 <form action="AddCategory" method="post">
-<table>
+<table  class="table" style=width:25%;margin:auto;>
+
 	
 	<tr>
 		<h1 align="center">Category Module</h1>
@@ -24,22 +28,25 @@
 	
 	<tr>
 		<td>Category ID</td>
-		<td><input name="catId"/></td>
+		<td><input class="form-control"name="catId"/></td>
 	</tr>
 	
 	<tr>
 		<td>Category Name</td>
-		<td><input type="text" name="catName"/></td>
+		<td><input class="form-control" type="text" name="catName"/></td>
 	</tr>
 
 	<tr>
 		<td>Category Description</td>
-		<td><input type="text" name="catDesc"/></td>
+		
+		<td><textarea class="form-control" type="text" name="catDesc"></textarea></td>
 	</tr>
-	<tr>
+	<tr style="width:100%;">
 		<td>
-			<button type="submit" class="submitbtn">Insert</button>
-			<button type="reset" class="erasebtn">Erase</button>
+			<button style="width:100px;margin-left:60px;"  class="btn btn-success btn-outline" type="submit" class="submitbtn">Insert</button>
+		</td>
+		<td>
+			<button style="width:50%;" class="btn btn-default btn-outline" type="reset" class="erasebtn">Erase</button>
 	</td>
 	</tr>
 
@@ -47,31 +54,34 @@
 
 </form>
 </div>
-<div id="container" style=width:100%;float:left;margin-top:100px;margin-bottom:100px; align="center" >
-<table>
-<tr bgcolor="lightblue">
-	<td>Category Id</td>
-	<td>Category Name</td>
-	<td>Category Description</td>
-	<td>operation</td>
+<table class="table" style=width:50%;margin:auto;>
+
+    
+    <thead class="blue-grey lighten-5"><tr bgcolor="black">
+	<td style=color:white;>Category Id</td>
+	<td style=color:white;>Category Name</td>
+	<td style=color:white;>Category Description</td>
+	<td style=color:white;>Operation</td>
 </tr> 
+</thead>
 <c:forEach items="${categoryList}" var="category">
-	<tr bgcolor="cyan">
+	<tr bgcolor="#EEEEEE">
 	<td>${category.catId}</td>
 	<td>${category.catName}</td>
 	<td>${category.catDesc}</td>
 	<td>
 	
-	<a href="<c:url value="/deleteCategory/${category.catId}"/>">DELETE</a>
-	<a href="<c:url value="/updateCategory/${category.catId}"/>">UPDATE</a>
+	
+	<a style=padding-left:10px; href="<c:url value="/updateCategory/${category.catId}"/>"><i class="glyphicon glyphicon-edit"></i></a>
+	<a style=padding-left:25px; href="<c:url value="/deleteCategory/${category.catId}"/>"><i class="glyphicon glyphicon-trash"></i></a>
 	</td>
 	</tr>
 
 </c:forEach>
 </table>
- </div>
+
  
-  <div  style=width:100%;height:2px;margin-top:800px;background:black;></div>
+  <div  style=width:100%;height:2px;margin-top:150px;background:black;></div>
  
 </body>
 <jsp:include page="footer.jsp"></jsp:include>

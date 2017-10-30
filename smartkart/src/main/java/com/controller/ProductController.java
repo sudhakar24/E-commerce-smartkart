@@ -26,6 +26,7 @@ import com.model.Supplier;
 
 
 @Controller
+
 public class ProductController {
 	@Autowired
 	ProductDao productDao;
@@ -123,6 +124,8 @@ public class ProductController {
 		Product product=productDao.getProduct(productId);
 		m.addAttribute(product);
 		List<Product> listProduct=productDao.retrieveProduct();
+		m.addAttribute("categoryList",this.getCategories());
+		m.addAttribute("supplierList", this.getSupplieries());
 		m.addAttribute("productList",listProduct);
 		return "updateproduct";
 	}
@@ -135,6 +138,7 @@ public class ProductController {
 		m.addAttribute(product1);
 		
 		List<Product> listProduct=productDao.retrieveProduct();
+		
 		m.addAttribute("productList",listProduct);
 		
 		return "productdetails";

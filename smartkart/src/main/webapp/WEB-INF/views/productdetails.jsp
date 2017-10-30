@@ -12,18 +12,21 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<table cellspacing="2" align="center">
-<tr bgcolor="gray">
-	<td>Product Name</td>
-	<td>Category</td>
-	<td>Supplier</td>
-	<td>Price</td>
-	<td>Stock</td>
-	<td>Photo</td>
-	<td>Operation</td>
+
+<table class="table" style=width:50%;margin-top:100px;margin-left:auto;margin-right:auto;>
+	<h1 align="center">Product List</h1>
+    
+    <thead class="blue-grey lighten-5"><tr bgcolor="black">
+	<td style=color:white;>Product Name</td>
+	<td style=color:white;>Category</td>
+	<td style=color:white;>Supplier</td>
+	<td style=color:white;>Price</td>
+	<td style=color:white;>Stock</td>
+	<td style=color:white;>Photo</td>
+	<td style=color:white;>Operation</td>
 </tr>
 <c:forEach items="${productList}" var="product">
-	<tr>
+	<tr bgcolor="#EEEEEE">
 		<td>${product.productName}</td>
 		<td>${product.catId}</td>
 		<td>${product.supplierId}</td>
@@ -34,8 +37,9 @@
 		<img src="<c:url value="/resources/${product.productId}.jpg"/>" width=100px;height=100px;/>
 		</a>
 		</td>
-		<td><a href="<c:url value="/deleteProduct/${product.productId}"/>">DELETE</a>
-		<a href="<c:url value="/updateProduct/${product.productId}"/>">UPDATE</a>
+		<td><a style=padding-left:10px; href="<c:url value="/updateProduct/${product.productId}"/>"><i class="glyphicon glyphicon-edit"></i></a>
+		<a style=padding-left:25px; href="<c:url value="/deleteProduct/${product.productId}"/>"><i class="glyphicon glyphicon-trash"></i></a>
+		
 		</td>
 		</tr>
 	</c:forEach>

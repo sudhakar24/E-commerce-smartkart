@@ -16,6 +16,7 @@ import com.Dao.SupplierDao;
 import com.model.Supplier;
 
 @Controller
+
 public class SupplierController {
 	@Autowired
 	SupplierDao supplierDao;

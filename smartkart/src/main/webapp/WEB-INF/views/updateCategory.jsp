@@ -13,40 +13,51 @@
 <jsp:include page="header.jsp"></jsp:include>
 
 <body>
+<div id="container" style=width:100%;float:left;margin-top:50px;margin-bottom:50px; align="center" >
+
 <form:form action="../UpdateCategory" modelAttribute="category" method="post">
-<table align="center" cellsapcing="2">
+<table  class="table" style=width:25%;margin:auto;>
+
 	<tr>
-		<td colspan="2">Category Module</td>
+		<h1 align="center">Category Update Module</h1>
 	</tr>
 	<tr>
 		<td>Category ID</td>
-		<td><form:input path="catId"/></td>
+		<td><form:input class="form-control"  path="catId"/></td>
 	</tr>
 	<tr>
 		<td>Category Name</td>
-		<td><form:input path="catName"/></td>
+		<td><form:input class="form-control" path="catName"/></td>
 	</tr>
 	<tr>
 		<td>Category Description</td>
-		<td><form:input path="catDesc"/></td>
-	</tr>
-		<td colspan="2">
-			<center><input type="submit" value="Update Category"/></center>
-			<center><button type="reset">Erase</button>
+		<td><form:textarea class="form-control" type="text" path="catDesc"/></td>
+		</tr>
+		<tr>
+		<td>
+			<button style="width:100px;margin-left:60px;"  class="btn btn-success btn-outline" type="submit" class="submitbtn">Update</button>
 		</td>
+		<td>
+			<button style="width:50%;" class="btn btn-default btn-outline" type="reset" class="erasebtn">Erase</button>
+	</td>
 	</tr>
 
 </table>
 </form:form>
- <table align="center">
-<tr bgcolor="lightblue">
-	<td>Category Id</td>
-	<td>Category Name</td>
-	<td>Category Description</td>
-	<td>operation</td>
+</div>
+ <table class="table" style=width:50%;margin:auto;>
+
+
+    
+    <thead class="blue-grey lighten-5"><tr bgcolor="black">
+	<td style=color:white;>Category Id</td>
+	<td style=color:white;>Category Name</td>
+	<td style=color:white;>Category Description</td>
+	
 </tr> 
+</thead>
 <c:forEach items="${categoryList}" var="category">
-	<tr bgcolor="cyan">
+	<tr bgcolor="#EEEEEE">
 	<td>${category.catId}</td>
 	<td>${category.catName}</td>
 	<td>${category.catDesc}</td>
@@ -54,7 +65,7 @@
 
 </c:forEach>
 </table>
- <div  style=width:100%;height:2px;margin-top:400px;background:black;></div>
+ <div  style=width:100%;height:2px;margin-top:150px;background:black;></div>
  
 </body>
 <jsp:include page="footer.jsp"></jsp:include>

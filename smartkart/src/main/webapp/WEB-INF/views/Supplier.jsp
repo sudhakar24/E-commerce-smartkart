@@ -15,10 +15,12 @@
 
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<div id="container" style=width:100%;float:left;margin-top:50px;margin-bottom:50px; align="center" >
+
 <form action="AddSupplier" method="post">
-<table align="center" cellsapcing="2">
+<table  class="table" style=width:25%;margin:auto;>
 	<tr>
-		<td colspan="2">Supplier Module</td>
+		<h1 align="center">Supplier Module</h1>
 	</tr>
 	<tr>
 		<td>Supplier ID</td>
@@ -26,48 +28,58 @@
 	</tr>
 	<tr>
 		<td>Supplier Name</td>
-		<td><input type="text" name="supplierName"/></td>
+		<td><input class="form-control" type="text" name="supplierName"/></td>
 	</tr>
 	<tr>
 		<td>Supplier Description</td>
-		<td><input type="text" name="supplierDes"/></td>
+		<td><textarea class="form-control" type="text" name="supplierDes"></textarea></td>
 	</tr>
 	<tr>
 		<td>Supplier Email</td>
-		<td><input type="text" name="supplierEmail"/></td>
-	<tr>
-		<td colspan="2">
-			<center><input type="submit" value="Insert"/></center>
-			<center><button type="reset">Erase</button>
+		<td><input class="form-control" type="text" name="supplierEmail"/></td>
+		
+	</tr>
+	<tr style="width:100%;">
+		<td>
+			
+			<button style="width:100px;margin-left:60px;"  class="btn btn-success btn-outline" type="submit" class="submitbtn">Insert</button>
 		</td>
+		<td>
+			<button style="width:50%;" class="btn btn-default btn-outline" type="reset" class="erasebtn">Erase</button>
+	</td>
 	</tr>
 
 </table>
 </form>
-<table align="center">
-<tr bgcolor="lightblue">
-	<td>Supplier Id</td>
-	<td>Supplier Name</td>
-	<td>Supplier Description</td>
-	<td>Supplier Email</td>
-	<td>operation</td>
+</div>
+<table class="table" style=width:50%;margin:auto;>
+
+    
+    <thead class="blue-grey lighten-5"><tr bgcolor="black">
+    <td style=color:white>Supplier Id</td>
+	<td style=color:white>Supplier Name</td>
+	<td style=color:white>Supplier Description</td>
+	<td style=color:white>Supplier Email</td>
+	<td style=color:white>operation</td>
 </tr> 
+</thead>
 <c:forEach items="${supplierList}" var="supplier">
-	<tr bgcolor="cyan">
+	<tr bgcolor="#EEEEEE">
 	<td>${supplier.supplierId}</td>
 	<td>${supplier.supplierName}</td>
 	<td>${supplier.supplierDes}</td>
 	<td>${supplier.supplierEmail}</td>
 	<td>
-	<a href="<c:url value="/deleteSupplier/${supplier.supplierId}"/>">DELETE</a>
-	<a href="<c:url value="/updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
+	<a style=padding-left:10px; href="<c:url value="/updateSupplier/${supplier.supplierId}"/>"><i class="glyphicon glyphicon-edit"></i></a>
+	<a style=padding-left:25px; href="<c:url value="/deleteSupplier/${supplier.supplierId}"/>"><i class="glyphicon glyphicon-trash"></i></a>
+	
 	</td>
 	</tr>
 
 </c:forEach>
 </table>
  
-  <div  style=width:100%;height:2px;margin-top:400px;background:black;></div>
+  <div  style=width:100%;height:2px;margin-top:150px;background:black;></div>
   
 </body>
 <jsp:include page="footer.jsp"></jsp:include>
