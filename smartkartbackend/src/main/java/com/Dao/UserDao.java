@@ -1,8 +1,12 @@
 package com.Dao;
 
-import com.model.*;
+
+
+import com.model.User;
 
 public interface UserDao {
-	public void inserUser(User user);
+	public boolean addUser(User user);
+	
+	public User getUser(String useremail);
 	
 }

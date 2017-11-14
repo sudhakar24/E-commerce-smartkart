@@ -2,24 +2,40 @@ package com.model;
 
 import java.io.Serializable;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
+
 @Component
 @Entity
-public class User  implements Serializable 
-{
+public class User implements Serializable {
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	@Id
+	private String email;
+	
 	private String firstname;
 	private String lastname;
-	private String email;
+	
 	private String phone;
 	private String password;
 	private String address;
 	private String country;
 	private String role;
 	private String enabled;
+	
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getFirstname() {
 		return firstname;
 	}
@@ -31,12 +47,6 @@ public class User  implements Serializable
 	}
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	public String getPhone() {
 		return phone;
@@ -77,5 +87,5 @@ public class User  implements Serializable
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
 }

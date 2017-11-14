@@ -7,10 +7,11 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class Supplier {
+
 	@Id
-	
+
 	int supplierId;
-	String supplierName,supplierDes,supplierEmail;
+	String supplierName, supplierDes, supplierEmail;
 	public int getSupplierId() {
 		return supplierId;
 	}
@@ -35,9 +36,4 @@ public class Supplier {
 	public void setSupplierEmail(String supplierEmail) {
 		this.supplierEmail = supplierEmail;
 	}
-		
-	
-	
-	
-
 }

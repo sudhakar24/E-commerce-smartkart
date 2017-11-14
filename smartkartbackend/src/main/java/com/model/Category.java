@@ -8,9 +8,9 @@ import javax.persistence.Table;
 @Table
 public class Category {
 	@Id
-	
+
 	int catId;
-	String catName,catDesc;
+	String catName;
 	public int getCatId() {
 		return catId;
 	}
@@ -23,13 +23,4 @@ public class Category {
 	public void setCatName(String catName) {
 		this.catName = catName;
 	}
-	public String getCatDesc() {
-		return catDesc;
-	}
-	public void setCatDesc(String catDesc) {
-		this.catDesc = catDesc;
-	}
-	
-	
-
 }
