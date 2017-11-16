@@ -22,11 +22,11 @@ import com.model.Supplier;
 import com.model.User;
 
 
-@Configuration
+@Configuration 
 @EnableTransactionManagement
 @ComponentScan("com")
 public class hiberConfig {
-	@Autowired
+	@Autowired  
 	@Bean(name = "datasource")
 	public DataSource getH2DataSource() {
 		System.out.println("Hibernate initiated...");
